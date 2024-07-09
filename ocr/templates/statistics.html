@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statistical Analysis</title>
+    <style>
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+        }
+        img {
+            max-width: 100%;
+            display: block;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Statistical Analysis</h1>
+    
+        <h2>Correlation Matrix</h2>
+        <img src="data:image/png;base64,{{ correlation_matrix }}" alt="Correlation Matrix">
+        
+        <h2>Top 10 Customers by Total Sales</h2>
+        <img src="data:image/png;base64,{{ customer_analysis }}" alt="Top 10 Customers by Total Sales">
+        
+        <h2>Categories by Total Sales</h2>
+        <img src="data:image/png;base64,{{ category_analysis }}" alt="Top 10 Categories by Total Sales">
+        
+        <h2>Total Sales by Category</h2>
+        <img src="data:image/png;base64,{{ category_sales }}" alt="Total Sales by Category">
+        
+        <h2>Top 10 Items by Total Sales</h2>
+        <img src="data:image/png;base64,{{ item_analysis }}" alt="Top 10 Items by Total Sales">
+
+        <h2>Yearly Sales</h2>
+        <img src="data:image/png;base64,{{ yearly_sales_encoded }}" alt="Yearly Sales">
+    </div>
+</body>
+</html>

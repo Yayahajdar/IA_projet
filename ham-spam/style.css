@@ -1,0 +1,14 @@
+#root {
+background: aqua;
+
+}
+
+button[kind="secondary"] {
+    position: relative;
+    background-color: orange;
+    margin-top: 50px;
+   
+  }
+  .st-emotion-cache-1r4qj8v {
+    background: color(srgb 0.9 0.91 0.75);
+  }

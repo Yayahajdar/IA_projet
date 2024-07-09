@@ -1,0 +1,15 @@
+from connexionBdd import client
+import pymongo
+
+conn = pymongo.MongoClient()
+db = conn.test
+col = db.mooc
+
+filter={
+    'username': 'jirasrideslis'
+}
+result = client['mooc']['user'].find(
+  filter=filter
+)
+for doc in result :
+   print(doc)

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Invoice Data Results</title>
+</head>
+<body>
+
+    <h1>Invoice Data Extraction Results</h1>
+
+    <!-- Display the image -->
+    <div style="float: left; margin-right: 20px;">
+        <h2>Image</h2>
+        <img src="{{ image_url }}" alt="Image">
+    </div>
+
+    <div>
+        <h2>Invoice Data</h2>
+        <p>Customer Name: {{ invoice_data['Customer Name'] }}</p>
+        <p>Invoice ID: {{ invoice_data['Invoice ID'] }}</p>
+        <p>Invoice Date: {{ invoice_data['Invoice Date'] }}</p>
+        <p>Invoice Total: {{ invoice_data['Invoice Total'] }}</p>
+        <p>Customer Number: {{ customer_number }}</p>
+        <p>Category: {{ category }}</p>
+        
+        <h2>Items</h2>
+        {% if invoice_data['Items'] %}
+            <ul>
+            {% for item in invoice_data['Items'] %}
+                <li>
+                    <p>Description: {{ item['Description'] }}</p>
+                    <p>Quantity: {{ item['Quantity'] }}</p>
+                    <p>Amount: {{ item['Amount'] }}</p>
+                </li>
+            {% endfor %}
+            </ul>
+        {% else %}
+            <p>No items found.</p>
+        {% endif %}
+    </div>
+</body>
+</html>
