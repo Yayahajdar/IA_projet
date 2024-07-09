@@ -1,4 +1,4 @@
-# netfloox-G3
+# netfloox
 
 le dossier contient :
 - les documentations techniques des 2 algorithmes
